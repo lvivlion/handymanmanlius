@@ -198,18 +198,18 @@
                     <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">We provide handyman services to Manlius and many of its surrounding communities. If you're nearby, don't hesitate to reach out!</p>
                 </div>
                 <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
-                     <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4 text-lg text-gray-700">
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Manlius, NY</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Fayetteville, NY</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Cazenovia, NY</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>DeWitt, NY</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Pompey, NY</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Jamesville, NY</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Minoa, NY</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Syracuse, NY*</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>And more...</li>
-                    </ul>
-                    <p class="text-center text-gray-500 mt-6 text-sm">*Select areas, please inquire.</p>
+                       <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4 text-lg text-gray-700">
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Manlius, NY</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Fayetteville, NY</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Cazenovia, NY</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>DeWitt, NY</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Pompey, NY</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Jamesville, NY</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Minoa, NY</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Syracuse, NY*</li>
+                            <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>And more...</li>
+                        </ul>
+                        <p class="text-center text-gray-500 mt-6 text-sm">*Select areas, please inquire.</p>
                 </div>
             </div>
         </section>
@@ -328,8 +328,8 @@
 
                 const endpoint = "https://22czkke46wc6m6y4evtkk37g4u0uruvl.lambda-url.us-east-1.on.aws/";
                 const body = JSON.stringify({
-                    title: "Handyman", // Added title as requested
-                    senderName: name.value,
+                    title: "HANDYMANMANLIUS",
+                    senderName: `Handyman Manlius | ${name.value}`, // UPDATED: Changed senderName format
                     senderEmail: email.value,
                     senderPhone: phone.value,
                     message: message.value
