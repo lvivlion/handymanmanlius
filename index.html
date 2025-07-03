@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!-- SEO Meta Tags from original site -->
     <title>Handyman Manlius | Modern & Reliable Handyman Services in Manlius, NY</title>
     <meta name="description" content="Your trusted local handyman in Manlius, NY, and surrounding areas. Offering reliable home repair, maintenance, and improvement services with a focus on quality and customer satisfaction. Contact Handyman Manlius today for a free quote!">
     <meta name="keywords" content="handyman Manlius NY, home repair Manlius, home maintenance Manlius, local handyman, Fayetteville NY handyman, Cazenovia NY handyman, DeWitt NY handyman, Minoa NY handyman, Syracuse NY handyman, Jamesville NY handyman, Pompey NY handyman, home improvement Manlius">
     <meta name="robots" content="index, follow">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <!-- Basic Styles & Tailwind Config -->
     <style>
         body {
@@ -31,7 +27,6 @@
             border-radius: 6px;
         }
     </style>
-    
     <!-- Schema.org JSON-LD (from original) -->
     <script type="application/ld+json">
     {
@@ -75,7 +70,6 @@
     </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
     <!-- Header & Navigation -->
     <header id="header" class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -102,7 +96,6 @@
     </header>
 
     <main>
-
         <!-- Hero Section -->
         <section id="hero" class="bg-gray-100">
             <div class="container mx-auto px-6 py-20 md:py-32 text-center">
@@ -186,7 +179,7 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <img src="ourteam.jpg" alt="The Handyman Manlius team with their work truck and tools" class="rounded-xl shadow-2xl w-full">
+                        <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Team" alt="The Handyman Manlius team with their work truck and tools" class="rounded-xl shadow-2xl w-full">
                     </div>
                     <div class="md:w-1/2">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Your Trusted Local Professional</h2>
@@ -220,25 +213,48 @@
                 </div>
             </div>
         </section>
-        
-        <!-- Contact/CTA Section -->
+
+        <!-- Contact Section -->
         <section id="contact" class="bg-gray-800 text-white">
-             <div class="container mx-auto px-6 py-20 md:py-28 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold">Ready to Tackle Your To-Do List?</h2>
-                <p class="mt-3 text-lg text-gray-300 max-w-2xl mx-auto">Get in touch today for a free, no-obligation quote. We're ready to help!</p>
-                 <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="tel:+1-315-744-8646" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-amber-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-amber-600 transition duration-300 shadow-lg text-lg">
-                        <i data-lucide="phone"></i>
-                        Call (315) 744-8646
-                    </a>
-                    <a href="mailto:quote@handymanmanlius.com" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gray-100 text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-white transition duration-300 shadow-lg text-lg">
-                        <i data-lucide="mail"></i>
-                        Email: quote@handymanmanlius.com
-                    </a>
+            <div class="container mx-auto px-6 py-20 md:py-28">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Ready to Tackle Your To-Do List?</h2>
+                    <p class="mt-3 text-lg text-gray-300 max-w-2xl mx-auto">Get in touch today for a free, no-obligation quote. Fill out the form below or give us a call.</p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="phone" class="sr-only">Phone</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Tell us about your project..." required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" id="submit-button" class="w-full flex items-center justify-center gap-2 bg-amber-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-amber-600 transition duration-300 shadow-lg text-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                                Send Request
+                            </button>
+                        </div>
+                    </form>
+                     <p class="mt-8 text-center text-lg text-gray-300">
+                        Or call us directly at: <a href="tel:+1-315-744-8646" class="font-semibold hover:text-amber-400">(315) 744-8646</a>
+                    </p>
+                    <p class="mt-4 text-center text-lg text-gray-300">
+                        Or email: <a href="mailto:quote@handymanmanlius.com" class="font-semibold hover:text-amber-400">quote@handymanmanlius.com</a>
+                    </p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -256,6 +272,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed bottom-5 right-5 p-4 rounded-lg text-white transition-opacity duration-300 opacity-0 z-50">
+        <p id="notification-message"></p>
+    </div>
 
     <script>
         // Lucide Icons activation
@@ -278,7 +299,68 @@
 
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 
+        // --- CONTACT FORM SCRIPT ---
+        const contactForm = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-button');
+        const notification = document.getElementById('notification');
+        const notificationMessage = document.getElementById('notification-message');
+
+        function showNotification(message, isSuccess) {
+            notificationMessage.textContent = message;
+            notification.classList.remove('bg-green-600', 'bg-red-600');
+            notification.classList.add(isSuccess ? 'bg-green-600' : 'bg-red-600');
+            notification.classList.remove('opacity-0');
+
+            setTimeout(() => {
+                notification.classList.add('opacity-0');
+            }, 4000);
+        }
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                const { name, email, phone, message } = event.target.elements;
+
+                const endpoint = "https://22czkke46wc6m6y4evtkk37g4u0uruvl.lambda-url.us-east-1.on.aws/";
+                const body = JSON.stringify({
+                    title: "Handyman", // Added title as requested
+                    senderName: name.value,
+                    senderEmail: email.value,
+                    senderPhone: phone.value,
+                    message: message.value
+                });
+
+                const requestOptions = {
+                    method: "POST",
+                    body
+                };
+
+                fetch(endpoint, requestOptions)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Form submission failed.');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        showNotification('Message sent successfully!', true);
+                        contactForm.reset();
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        showNotification('Submission failed. Please try again.', false);
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Request';
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
