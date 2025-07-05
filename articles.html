@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags for Articles Page -->
+    <title>Handyman Articles & Tips | Manlius, NY</title>
+    <meta name="description" content="A collection of helpful articles and tips for homeowners in the Manlius, Syracuse, and surrounding NY areas. Learn about home repair, maintenance, and improvement projects.">
+    <meta name="keywords" content="handyman tips, home repair articles, Manlius NY home maintenance, Syracuse DIY, Fayetteville home improvement, electrical tips, plumbing advice, floor installation guide">
+    <meta name="robots" content="index, follow">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Basic Styles & Tailwind Config -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom focus ring for accessibility */
+        :focus-visible {
+            outline: 3px solid #f59e0b;
+            outline-offset: 2px;
+            border-radius: 6px;
+        }
+        /* Prevent body scroll when modal is open */
+        .modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">
+                Handyman Manlius
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#contact" class="bg-amber-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-amber-600 transition duration-300 shadow">Free Quote</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <a href="#contact" class="block mt-2 w-full text-center bg-amber-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-amber-600 shadow">Free Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Articles Section -->
+        <section id="articles" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Helpful Articles & Handyman Tips</h1>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Your guide to home maintenance and repair in the Manlius area. Browse our articles for tips and insights on your next home project.</p>
+                </div>
+                
+                <!-- Articles Grid -->
+                <div id="articles-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Articles will be dynamically inserted here -->
+                </div>
+
+                <div class="text-center mt-16">
+                    <a href="#contact" class="bg-amber-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-amber-600 transition duration-300 shadow-lg text-lg inline-flex items-center gap-2">
+                        <i data-lucide="mail"></i>
+                        Get Your Free Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-800 text-white">
+            <div class="container mx-auto px-6 py-20 md:py-28">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Ready to Tackle Your To-Do List?</h2>
+                    <p class="mt-3 text-lg text-gray-300 max-w-2xl mx-auto">Get in touch today for a free, no-obligation quote. Fill out the form below or give us a call.</p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="phone" class="sr-only">Phone</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="address" class="sr-only">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Your Address" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Tell us about your project..." required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" id="submit-button" class="w-full flex items-center justify-center gap-2 bg-amber-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-amber-600 transition duration-300 shadow-lg text-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                                Send Request
+                            </button>
+                        </div>
+                    </form>
+                     <p class="mt-8 text-center text-lg text-gray-300">
+                        Or call us directly at: <a href="tel:+1-315-744-8646" class="font-semibold hover:text-amber-400">(315) 744-8646</a>
+                    </p>
+                    <p class="mt-4 text-center text-lg text-gray-300">
+                        Or email: <a href="mailto:quote@handymanmanlius.com" class="font-semibold hover:text-amber-400">quote@handymanmanlius.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; <span id="current-year"></span> Handyman Manlius. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">Serving Manlius, NY and surrounding areas.</p>
+            <div class="mt-4 text-sm">
+                <a href="tel:+1-315-744-8646" class="hover:text-amber-500 transition duration-300">(315) 744-8646</a>
+                <span class="mx-2">|</span>
+                <a href="mailto:quote@handymanmanlius.com" class="hover:text-amber-500 transition duration-300">quote@handymanmanlius.com</a>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-700 text-xs">
+                 <p>Created by <a href="http://ost4p.com/website" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition duration-300">OL Website Services</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Article Modal -->
+    <div id="article-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col">
+            <div class="p-6 border-b flex justify-between items-center">
+                <h2 id="modal-title" class="text-2xl font-bold text-gray-900"></h2>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-800">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+            </div>
+            <div id="modal-content" class="p-6 overflow-y-auto">
+                <!-- Full article content will be loaded here -->
+            </div>
+            <div class="p-4 bg-gray-50 border-t flex justify-between items-center">
+                <button id="prev-article" class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i> Previous
+                </button>
+                <button id="next-article" class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold">
+                    Next <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed bottom-5 right-5 p-4 rounded-lg text-white transition-opacity duration-300 opacity-0 z-50">
+        <p id="notification-message"></p>
+    </div>
+
+    <script>
+        // Lucide Icons activation
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                 mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- ARTICLES SCRIPT ---
+        const articles = [
+            {
+                title: "5 Signs You Need Faucet Replacement in Your Manlius Home",
+                summary: "Is that constant drip driving you crazy? Learn the top signs it's time to replace your kitchen or bathroom faucet.",
+                content: `<p class="mb-4">A dripping faucet is more than just an annoyance; it's a sign of a bigger problem and a waste of water and money. For homeowners in <strong>Manlius, NY</strong>, knowing when to repair versus replace a faucet can save you a headache. Here are five key signs that it's time for a professional faucet replacement.</p><ol class="list-decimal list-inside space-y-3 mb-4"><li><strong>Constant Dripping:</strong> If tightening the handle doesn't stop the drip, the internal components are likely worn out. A new faucet is often the most cost-effective solution.</li><li><strong>Visible Rust or Mineral Deposits:</strong> If you see rust around the faucet base or mineral buildup on the spout that's hard to clean, the fixture is deteriorating. This can affect your water quality.</li><li><strong>Frequent Repairs:</strong> Are you calling a handyman in Manlius every few months for the same faucet? Investing in a new, reliable fixture will save you money on service calls.</li><li><strong>Outdated Style:</strong> An old, tarnished faucet can make your entire kitchen or bathroom look dated. A new fixture is a simple, affordable way to modernize your space.</li><li><strong>Reduced Water Pressure:</strong> If the water flow is weak and cleaning the aerator doesn't help, there could be a blockage or corrosion deep inside the faucet that warrants replacement.</li></ol><p>If you're experiencing any of these issues, it's time to consider a <strong>faucet replacement in Manlius</strong>. Contact a professional handyman to ensure it's installed correctly and without leaks.</p>`
+            },
+            {
+                title: "Choosing the Right Ceiling Fan for Your Fayetteville, NY Property",
+                summary: "From size to style, we break down what to consider when selecting a new ceiling fan to improve comfort and energy efficiency.",
+                content: `<p class="mb-4">A ceiling fan is a fantastic addition to any home in <strong>Fayetteville, NY</strong>, providing year-round comfort and helping to reduce energy bills. But choosing the right one involves more than just picking a style you like. Here’s what to consider for the perfect <strong>ceiling fan installation</strong>.</p><h4 class="font-semibold text-lg mb-2">1. Room Size and Blade Span</h4><p class="mb-4">The most important factor is matching the fan's blade span to your room's square footage. A fan that's too small won't move enough air, and one that's too large will be overwhelming.</p><ul class="list-disc list-inside space-y-2 mb-4"><li><strong>Small Rooms (up to 75 sq ft):</strong> 29-36 inch blades</li><li><strong>Medium Rooms (76-175 sq ft):</strong> 42-50 inch blades</li><li><strong>Large Rooms (176+ sq ft):</strong> 52-inch or larger blades</li></ul><h4 class="font-semibold text-lg mb-2">2. Ceiling Height</h4><p class="mb-4">For safety, fan blades should be at least 7 feet from the floor. For high ceilings in Fayetteville homes, you'll need a downrod to lower the fan to an effective height (typically 8-9 feet from the floor for optimal airflow).</p><h4 class="font-semibold text-lg mb-2">3. Style and Features</h4><p class="mb-4">Consider a fan that complements your home's decor. Many modern fans come with integrated lighting, remote controls, and reversible motors—a key feature for pushing warm air down during Central New York winters.</p><p>A professional handyman can ensure your <strong>fan installation in Fayetteville</strong> is safe, secure, and perfectly balanced for quiet, wobble-free operation.</p>`
+            },
+            {
+                title: "The Benefits of Professional Floor Installation in Syracuse",
+                summary: "Thinking about new floors? Discover why hiring a professional ensures a flawless, long-lasting result for your home.",
+                content: `<p class="mb-4">New flooring is one of the most impactful upgrades you can make to your <strong>Syracuse, NY</strong> home. While DIY might seem tempting, a professional <strong>floor installation</strong> offers numerous benefits that ensure a high-quality, long-lasting result.</p><h4 class="font-semibold text-lg mb-2">1. Proper Subfloor Preparation</h4><p class="mb-4">The key to a great floor is a perfect subfloor. A professional handyman in Syracuse will ensure your subfloor is clean, level, and free of imperfections that could cause bumps, gaps, or squeaks in your new flooring.</p><h4 class="font-semibold text-lg mb-2">2. The Right Tools and Expertise</h4><p class="mb-4">Professional installers have specialized tools for cutting and fitting flooring around tricky corners, doorways, and vents. Their experience prevents common DIY mistakes, such as not leaving expansion gaps for laminate or vinyl, which is crucial with Syracuse's changing humidity.</p><h4 class="font-semibold text-lg mb-2">3. Time and Efficiency</h4><p class="mb-4">What might take a homeowner a full weekend (or more), a professional can often complete in a single day. They handle everything from moving furniture to hauling away the old flooring and debris, saving you time and hassle.</p><h4 class="font-semibold text-lg mb-2">4. Guaranteed Results</h4><p>When you hire a professional for your <strong>floor installation in Syracuse</strong>, you get peace of mind. The job is done right the first time, preventing costly repairs down the road and ensuring your new floors look beautiful for years to come.</p>`
+            },
+            { 
+                title: "Quick Guide to Outlet Repair and Replacement in DeWitt", 
+                summary: "Learn when an outlet needs a simple repair versus a full replacement to keep your home safe and functional.", 
+                content: `<p class="mb-4">Electrical outlets are essential to modern life, but a faulty one can be a serious safety hazard. For homeowners in <strong>DeWitt, NY</strong>, it's important to recognize the warning signs. A loose plug, cracks in the faceplate, or an outlet that feels warm to the touch are all red flags. Similarly, if an outlet is sparking or has scorch marks, it requires immediate attention.</p><p class="mb-4">Sometimes, the problem is a simple loose wire that a handyman can fix. However, for older two-prong outlets, a full <strong>outlet replacement in DeWitt</strong> with a modern, grounded three-prong outlet is a crucial safety upgrade. For any electrical work, big or small, hiring a qualified handyman ensures the job is done safely and up to code.</p>`
+            },
+            { 
+                title: "How to Update Your Home's Look with New Door Handles in Cazenovia", 
+                summary: "A small change can make a big impact. See how new door hardware can modernize your home's aesthetic.", 
+                content: `<p class="mb-4">Looking for a quick and affordable way to refresh the look of your <strong>Cazenovia</strong> home? Replacing your interior door handles is a high-impact project that can be done in an afternoon. Outdated brass knobs can be swapped for sleek matte black levers or classic brushed nickel handles to instantly modernize your space.</p><p class="mb-4">When choosing new hardware, consider the overall style of your home. Also, ensure the new handle's latch mechanism fits your existing door preparation. While it's a manageable DIY project for some, a <strong>handyman service in Cazenovia</strong> can ensure a perfect, hassle-free installation across all the doors in your home, guaranteeing a consistent and professional finish.</p>`
+            },
+            { 
+                title: "Light Fixture Installation: Brightening Up Your Jamesville Home", 
+                summary: "Explore modern lighting trends and the benefits of professional installation for safety and style.", 
+                content: `<p class="mb-4">Proper lighting can completely transform a room. In <strong>Jamesville, NY</strong>, homeowners are upgrading from outdated fixtures to modern chandeliers, pendant lights, and recessed lighting to create a brighter, more inviting atmosphere. A new light fixture not only improves visibility but also serves as a stunning focal point.</p><p class="mb-4">While changing a lightbulb is easy, a full <strong>light fixture installation</strong> involves wiring and electrical connections that are best left to a professional. A handyman can safely disconnect the old fixture, install the new one securely, and ensure all wiring is correct, protecting your Jamesville home from the risks of faulty installation.</p>`
+            },
+            { 
+                title: "Deck Repair Essentials for Manlius Homeowners", 
+                summary: "Get your deck ready for summer. Learn about common repairs that enhance safety and longevity.", 
+                content: `<p class="mb-4">With the beautiful summers in <strong>Manlius, NY</strong>, a deck is a valuable extension of your home. To keep it safe and looking great, regular maintenance is key. Common issues include loose railings, protruding nails, and rotted deck boards. Addressing these problems early prevents them from becoming larger, more expensive issues.</p><p class="mb-4">A thorough inspection each spring is recommended. If you find wobbly posts or soft, spongy wood, it's time to call for professional <strong>deck repair in Manlius</strong>. A local handyman can replace damaged boards, secure railings, and ensure your deck is a safe place for your family to enjoy all season long.</p>`
+            },
+            { 
+                title: "Is Your Fence Ready for a Syracuse Winter?", 
+                summary: "Tips for fence maintenance and repair to ensure it withstands the harsh weather.", 
+                content: `<p class="mb-4">The heavy snow and freeze-thaw cycles of a <strong>Syracuse</strong> winter can be tough on a fence. Before the first snowfall, inspect your fence for loose or broken posts, damaged panels, and failing hardware. A small problem now can become a major failure after a winter storm.</p><p class="mb-4">Ensure the base of your fence posts are secure and that there's no rot. For wooden fences, consider applying a water-repellent sealant in the fall. If you find significant issues, a timely <strong>fence repair service in Syracuse</strong> can fortify your fence, saving you from a costly replacement in the spring.</p>`
+            },
+            { 
+                title: "The Importance of GFCI Outlets in Fayetteville Kitchens & Baths", 
+                summary: "Understand the safety features of GFCI outlets and where they are required in your home.", 
+                content: `<p class="mb-4">In any area where water and electricity could potentially meet, such as kitchens, bathrooms, and outdoor spaces in <strong>Fayetteville, NY</strong>, a Ground Fault Circuit Interrupter (GFCI) outlet is a must-have safety device. A GFCI monitors the electrical current and instantly shuts off power if it detects an imbalance, preventing dangerous electrical shocks.</p><p class="mb-4">Building codes require GFCI protection in these wet locations. If your Fayetteville home is older, you may have standard outlets that need upgrading. A professional handyman can perform an <strong>outlet replacement</strong> to install GFCI outlets, providing a critical layer of safety for you and your family.</p>`
+            },
+            { 
+                title: "Laminate vs. Vinyl Flooring: What's Best for DeWitt, NY?", 
+                summary: "A comparison to help you choose the right durable and stylish flooring for your needs.", 
+                content: `<p class="mb-4">When upgrading the floors in your <strong>DeWitt, NY</strong> home, laminate and luxury vinyl are two popular, durable, and affordable choices. <strong>Laminate flooring</strong> is known for its realistic wood look and high resistance to scratches and fading. It's a great choice for living rooms and bedrooms.</p><p class="mb-4"><strong>Luxury vinyl plank (LVP)</strong>, on the other hand, is 100% waterproof, making it the ideal choice for kitchens, bathrooms, and basements in DeWitt where moisture is a concern. Both are excellent options, and a professional <strong>floor installation</strong> service can help you decide which material best suits your lifestyle and budget.</p>`
+            },
+            { 
+                title: "Minor Plumbing Repairs You Shouldn't Ignore in Manlius", 
+                summary: "From leaky pipes to running toilets, learn why you should address small plumbing issues quickly.", 
+                content: `<p class="mb-4">A small plumbing issue in your <strong>Manlius</strong> home can quickly turn into a major, expensive problem if ignored. A slow drip under the sink, for example, can lead to water damage, mold growth, and a rotted cabinet over time. Similarly, a constantly running toilet can waste hundreds of gallons of water each month, spiking your water bill.</p><p class="mb-4">Don't wait for a flood. Addressing these <strong>minor plumbing repairs</strong> promptly is key. A local handyman in Manlius can often fix these common issues, such as replacing a toilet flapper or tightening a p-trap, saving you from a much larger bill from an emergency plumber down the road.</p>`
+            },
+            { 
+                title: "A Guide to Furniture Assembly Services in Syracuse", 
+                summary: "Save time and frustration by hiring a professional for your flat-pack furniture assembly.", 
+                content: `<p class="mb-4">Flat-pack furniture is a convenient and affordable option for many <strong>Syracuse</strong> residents. However, the assembly process can be a major source of frustration, with confusing instructions and dozens of small parts. Improper assembly can also lead to wobbly, unstable, and unsafe furniture.</p><p class="mb-4">Instead of spending your weekend deciphering diagrams, consider a professional <strong>furniture assembly service in Syracuse</strong>. A handyman can quickly and correctly assemble your new desk, bookshelf, or bed frame, ensuring it's sturdy and built to last, saving you valuable time and effort.</p>`
+            },
+            { 
+                title: "Hanging Heavy Pictures and Mirrors in Cazenovia Homes", 
+                summary: "Ensure your treasured items are mounted securely with these professional tips.", 
+                content: `<p class="mb-4">A large mirror or heavy piece of art can be a beautiful statement piece in your <strong>Cazenovia</strong> home, but hanging it securely is critical. Simply putting a nail in the drywall is not enough; the weight can cause it to come crashing down, damaging your wall and your valuable item.</p><p class="mb-4">The key is to anchor the item to a wall stud. If a stud isn't in the right location, you'll need to use appropriate heavy-duty wall anchors, like toggle bolts or sleeve anchors. For peace of mind, a <strong>handyman service in Cazenovia</strong> can provide professional picture and mirror mounting, ensuring your items are hung safely and perfectly level.</p>`
+            },
+            { 
+                title: "Updating Cabinet Hardware: An Easy Manlius Home DIY", 
+                summary: "A simple and cost-effective way to give your kitchen or bathroom a fresh new look.", 
+                content: `<p class="mb-4">If you're looking for a budget-friendly way to update your kitchen or bathroom in <strong>Manlius</strong>, changing the cabinet hardware is one of the easiest and most effective projects you can tackle. Swapping old, dated knobs and pulls for new ones in a modern finish like matte black, champagne bronze, or brushed nickel can instantly transform the space.</p><p class="mb-4">Before you buy, make sure to measure the distance between the screw holes on your existing pulls to ensure the new ones will fit. While many homeowners in Manlius can handle this project themselves, a handyman can ensure all handles are installed perfectly straight and secure, especially if new holes need to be drilled.</p>`
+            },
+            { 
+                title: "When to Call a Handyman for General Home Repairs in Fayetteville", 
+                summary: "Identifying which small jobs are perfect for a handyman to save you time and money.", 
+                content: `<p class="mb-4">Every homeowner in <strong>Fayetteville</strong> has a to-do list of small repairs. A sticky door, a loose handrail, a small hole in the drywall—these are the kinds of tasks that can linger for months. While you might be tempted to ignore them, they can affect your home's comfort and safety.</p><p class="mb-4">These are perfect jobs for a local handyman. Instead of calling multiple expensive specialists, a handyman service can efficiently tackle a variety of <strong>general home repairs in Fayetteville</strong> in a single visit. This saves you time, money, and the hassle of coordinating with different contractors.</p>`
+            },
+            { 
+                title: "Childproofing Your Home: Outlet Safety in DeWitt", 
+                summary: "Tips for making your home safer for little ones, including tamper-resistant outlets.", 
+                content: `<p class="mb-4">For families with young children in <strong>DeWitt, NY</strong>, home safety is a top priority. Electrical outlets are a major hazard for curious toddlers. While plastic outlet caps are a common solution, they can be a choking hazard themselves and are easily removed.</p><p class="mb-4">A much safer and more permanent solution is to install <strong>tamper-resistant outlets (TRRs)</strong>. These outlets have internal shutters that block foreign objects from being inserted. Upgrading your outlets is a quick job for a professional handyman and provides invaluable peace of mind for parents in DeWitt.</p>`
+            },
+            { 
+                title: "Energy-Efficient Lighting Upgrades for Syracuse Homes", 
+                summary: "Switching to LED fixtures can lower your energy bills. Here’s what you need to know.", 
+                content: `<p class="mb-4">With rising energy costs, homeowners in <strong>Syracuse</strong> are constantly looking for ways to save. One of the most effective upgrades is switching to energy-efficient lighting. Replacing old incandescent bulbs with LEDs is a good start, but upgrading the entire fixture can offer even greater savings and improved light quality.</p><p class="mb-4">Modern LED light fixtures use up to 80% less energy and can last 25 times longer than traditional bulbs. A professional <strong>light fixture installation in Syracuse</strong> can help you choose and install fixtures that not only save money but also enhance the beauty of your home.</p>`
+            },
+            { 
+                title: "Fixing a Leaky Faucet: A Common Manlius Plumbing Issue", 
+                summary: "Understand the common causes of leaky faucets and when to call for a professional repair.", 
+                content: `<p class="mb-4">That persistent drip-drip-drip from a faucet is a sound no <strong>Manlius</strong> homeowner wants to hear. Most often, a leaky faucet is caused by a worn-out washer or O-ring. These small rubber parts degrade over time, breaking the seal that holds back water.</p><p class="mb-4">While replacing a washer can be a DIY task, it can sometimes be tricky to find the exact right size, and disassembling an old faucet can be difficult without the right tools. If you're not comfortable with the task, or if the leak persists after your repair, a local <strong>handyman in Manlius</strong> can quickly diagnose and fix the issue for good.</p>`
+            },
+            { 
+                title: "Smart Home Upgrades: USB Outlets in Fayetteville", 
+                summary: "Add convenience to your home by upgrading standard outlets to include USB charging ports.", 
+                content: `<p class="mb-4">In today's tech-driven world, families in <strong>Fayetteville</strong> are constantly juggling chargers and power adapters. A simple and convenient smart home upgrade is replacing standard electrical outlets with combination outlets that include USB-A and USB-C ports.</p><p class="mb-4">These modern outlets allow you to plug in phones, tablets, and other devices directly without needing a bulky adapter. They are perfect for kitchens, home offices, and bedrooms. A professional <strong>outlet replacement in Fayetteville</strong> is a quick and affordable way to add modern convenience to your home.</p>`
+            },
+            { 
+                title: "How to Choose a Locksmith vs. a Handyman for Lock Replacement", 
+                summary: "Understand the difference and when a handyman is the right choice for your DeWitt home's locks.", 
+                content: `<p class="mb-4">When you need to change the locks on your <strong>DeWitt</strong> home, you might wonder whether to call a locksmith or a handyman. For complex issues like re-keying an entire house, repairing high-security locks, or if you're locked out, a locksmith is the specialist you need.</p><p class="mb-4">However, for straightforward <strong>door handle and lock replacement</strong>, a handyman is often a more practical and affordable choice. If you're simply upgrading an old deadbolt or replacing a broken doorknob with a new set from the hardware store, a handyman service in DeWitt has the skills and tools to do the job efficiently.</p>`
+            },
+            { 
+                title: "Preparing Your Manlius Deck for Staining", 
+                summary: "Proper prep work is key to a beautiful, long-lasting deck stain. Learn the steps involved.", 
+                content: `<p class="mb-4">A fresh coat of stain can bring an old, weathered deck in <strong>Manlius</strong> back to life. But for the stain to last, proper preparation is absolutely essential. Don't make the mistake of applying new stain over old, peeling stain or dirty wood.</p><p class="mb-4">The first step is a thorough cleaning with a deck cleaner to remove dirt, mildew, and grime. Next, any old stain needs to be stripped or sanded off. Finally, the deck should be allowed to dry completely before staining. This prep work is labor-intensive, which is why many Manlius homeowners hire a handyman to handle the <strong>deck repair</strong> and preparation, ensuring a beautiful, professional result.</p>`
+            },
+            { 
+                title: "The Top 3 Flooring Choices for Syracuse Basements", 
+                summary: "Explore durable and moisture-resistant flooring options perfect for a finished basement.", 
+                content: `<p class="mb-4">Finishing a basement is a great way to add living space to your <strong>Syracuse</strong> home, but choosing the right flooring is critical due to the potential for moisture. You need a material that is durable and water-resistant.</p><ol class="list-decimal list-inside space-y-3 mb-4"><li><strong>Luxury Vinyl Plank (LVP):</strong> This is the top choice for basements. It's 100% waterproof, durable, and comes in realistic wood and stone looks.</li><li><strong>Engineered Hardwood:</strong> If you want real wood, engineered hardwood is more stable than solid hardwood and can handle the humidity changes in a Syracuse basement better.</li><li><strong>Tile:</strong> Ceramic or porcelain tile is completely waterproof and extremely durable, though it can feel cold underfoot.</li></ol><p>No matter your choice, a professional <strong>floor installation in Syracuse</strong> will ensure it's done right, with proper underlayment and sealing.</p>`
+            },
+            { 
+                title: "Ceiling Fan Direction: A Tip for Every Season in CNY", 
+                summary: "Did you know your fan's direction should change in winter? Learn this simple energy-saving trick.", 
+                content: `<p class="mb-4">Your ceiling fan can save you money year-round in <strong>Central New York</strong>, not just in the summer. The key is the small switch on the fan's motor housing that controls the blade direction. Using it correctly can lower both your heating and cooling bills.</p><p class="mb-4">In the <strong>summer</strong>, the blades should spin counter-clockwise to push air down, creating a cooling downdraft. In the <strong>winter</strong>, switch the direction to clockwise. The fan will then pull cool air up, which forces the warm air that has risen to the ceiling back down into the room. It's a simple tip that makes a big difference!</p>`
+            },
+            { 
+                title: "Why Won't My Outlet Work? Troubleshooting for Manlius Homes", 
+                summary: "Simple steps to check before calling a professional for a dead outlet.", 
+                content: `<p class="mb-4">A dead outlet in your <strong>Manlius</strong> home can be frustrating, but before you call for an <strong>outlet repair</strong>, there are a few simple things you can check yourself. First, test the device you're trying to use in a different, working outlet to make sure the device isn't the problem.</p><p class="mb-4">Next, check your circuit breaker panel to see if a breaker has tripped. If it has, flip it firmly to the "off" position and then back "on". If the outlet is in a kitchen, bathroom, or garage, look for a nearby GFCI outlet with "test" and "reset" buttons. Press the "reset" button. If these steps don't work, it's time to call a professional handyman in Manlius for a safe diagnosis and repair.</p>`
+            },
+            { 
+                title: "Outdoor Lighting Installation for Fayetteville Patios", 
+                summary: "Enhance your outdoor living space with professionally installed lighting.", 
+                content: `<p class="mb-4">Extend the enjoyment of your patio or deck in <strong>Fayetteville</strong> well into the evening with outdoor lighting. String lights, path lights, and deck post cap lights can create a beautiful ambiance while also improving safety by illuminating steps and walkways.</p><p class="mb-4">While solar lights are an easy DIY option, for more reliable and brighter lighting, a low-voltage hardwired system is superior. A professional <strong>light fixture installation</strong> ensures the transformer is correctly sized and all wiring is safely buried, giving your Fayetteville home a stunning and durable outdoor lighting setup.</p>`
+            },
+            { 
+                title: "Repairing a Wobbly Door Handle in DeWitt", 
+                summary: "A common household annoyance that can often be fixed with a few simple steps.", 
+                content: `<p class="mb-4">A loose, wobbly door handle is a common nuisance in many <strong>DeWitt</strong> homes. Not only is it annoying, but it can also become a security issue if the latch mechanism is compromised. In most cases, the fix is simple and just requires a screwdriver.</p><p class="mb-4">Look for the small set screws on the side of the handle or lever and the visible screws on the faceplate. Tightening these is often all that's needed. If the handle is still loose, the internal mechanism may be stripped or broken. In that case, a full <strong>door handle replacement</strong> by a DeWitt handyman is the best solution.</p>`
+            },
+            { 
+                title: "The Best Time of Year for Fence Repair in Syracuse", 
+                summary: "Plan your fence repairs at the right time to ensure durability and convenience.", 
+                content: `<p class="mb-4">For homeowners in <strong>Syracuse</strong>, timing your fence repair can make a big difference. The best times are typically in the late spring/early summer or the early fall. During these periods, the ground is not frozen, making it possible to dig and set new posts if needed.</p><p class="mb-4">Waiting until fall also allows any new pressure-treated wood to dry out over the winter before it needs to be stained or sealed in the spring. Avoid scheduling major <strong>fence repairs in Syracuse</strong> during the dead of winter or the wettest parts of spring if possible. Planning ahead ensures a smoother, more effective repair.</p>`
+            },
+            { 
+                title: "Replacing a Bathroom Faucet: A Manlius Handyman Project", 
+                summary: "See how a new faucet can instantly upgrade the look and feel of your bathroom.", 
+                content: `<p class="mb-4">Upgrading your bathroom doesn't have to mean a full renovation. A simple project like a <strong>faucet replacement</strong> can have a surprisingly large impact on the style of your <strong>Manlius</strong> bathroom. Swapping a dated, chrome faucet for a modern matte black or elegant brushed gold fixture can instantly elevate the entire vanity.</p><p class="mb-4">The project involves shutting off the water, disconnecting the old supply lines, removing the old faucet, and installing the new one. While it's a manageable task, it often involves working in a tight, awkward space under the sink. A handyman in Manlius can handle the job quickly and ensure a leak-free installation.</p>`
+            },
+            { 
+                title: "TV Mounting Services in Fayetteville: Get the Perfect Viewing Angle", 
+                summary: "Why professional TV mounting is safer and provides a cleaner look than DIY.", 
+                content: `<p class="mb-4">Mounting a new flat-screen TV on the wall is a popular project for homeowners in <strong>Fayetteville</strong>. It saves space, provides a clean, modern look, and keeps the TV safe from being knocked over. However, doing it correctly is crucial.</p><p class="mb-4">A professional handyman ensures the mount is anchored securely into wall studs, preventing the TV from crashing down. They can also help you determine the optimal height and viewing angle and conceal the wires for a clean, professional finish. For a secure and perfectly placed TV, a <strong>mounting service in Fayetteville</strong> is the way to go.</p>`
+            },
+            { 
+                title: "General Home Maintenance Checklist for Syracuse Area Homeowners", 
+                summary: "A seasonal checklist of small repairs to keep your home in top condition year-round.", 
+                content: `<p class="mb-4">Staying on top of home maintenance can prevent small issues from becoming big problems for homeowners in the <strong>Syracuse area</strong>. Here's a quick seasonal checklist:</p><ul class="list-disc list-inside space-y-3 mb-4"><li><strong>Spring:</strong> Clean gutters, check for loose deck boards, inspect window screens, and test your sump pump before the spring rains.</li><li><strong>Summer:</strong> Check for peeling paint on the exterior, inspect for pests, and clean your dryer vent to prevent fire hazards.</li><li><strong>Fall:</strong> Check weatherstripping on doors and windows, have your furnace serviced, and inspect your fence for damage before winter.</li><li><strong>Winter:</strong> Check for ice dams on the roof and test smoke and carbon monoxide detectors.</li></ul><p>A local <strong>Syracuse handyman</strong> can help you tackle this entire list, keeping your home safe and well-maintained all year long.</p>`
+            }
+        ];
+
+        const articlesGrid = document.getElementById('articles-grid');
+        const modal = document.getElementById('article-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalButton = document.getElementById('close-modal');
+        const prevArticleButton = document.getElementById('prev-article');
+        const nextArticleButton = document.getElementById('next-article');
+        
+        let currentArticleIndex = 0;
+
+        function openModal(index) {
+            currentArticleIndex = index;
+            const article = articles[index];
+            modalTitle.textContent = article.title;
+            modalContent.innerHTML = article.content;
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-open');
+            lucide.createIcons(); // Re-render icons if any are in the modal content
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        function showPrevArticle() {
+            const newIndex = (currentArticleIndex - 1 + articles.length) % articles.length;
+            openModal(newIndex);
+        }
+
+        function showNextArticle() {
+            const newIndex = (currentArticleIndex + 1) % articles.length;
+            openModal(newIndex);
+        }
+
+        // Populate the articles grid
+        articles.forEach((article, index) => {
+            const articleEl = document.createElement('a');
+            articleEl.href = '#';
+            articleEl.className = 'article-card block bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300';
+            articleEl.dataset.index = index;
+            articleEl.innerHTML = `
+                <h3 class="text-xl font-semibold mb-2 text-gray-900">${article.title}</h3>
+                <p class="text-gray-600">${article.summary}</p>
+            `;
+            articleEl.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(index);
+            });
+            articlesGrid.appendChild(articleEl);
+        });
+        
+        // Modal event listeners
+        closeModalButton.addEventListener('click', closeModal);
+        prevArticleButton.addEventListener('click', showPrevArticle);
+        nextArticleButton.addEventListener('click', showNextArticle);
+        
+        // Close modal on escape key press
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+        // Close modal on overlay click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+
+        // --- CONTACT FORM SCRIPT ---
+        const contactForm = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-button');
+        const notification = document.getElementById('notification');
+        const notificationMessage = document.getElementById('notification-message');
+
+        function showNotification(message, isSuccess) {
+            notificationMessage.textContent = message;
+            notification.classList.remove('bg-green-600', 'bg-red-600');
+            notification.classList.add(isSuccess ? 'bg-green-600' : 'bg-red-600');
+            notification.classList.remove('opacity-0');
+
+            setTimeout(() => {
+                notification.classList.add('opacity-0');
+            }, 4000);
+        }
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                const { name, email, phone, address, message } = event.target.elements;
+
+                const endpoint = "https://22czkke46wc6m6y4evtkk37g4u0uruvl.lambda-url.us-east-1.on.aws/";
+                
+                const fullMessage = `Address: ${address.value}\n\n${message.value}`;
+
+                const body = JSON.stringify({
+                    title: "HANDYMANMANLIUS",
+                    senderName: `Handyman Manlius | ${name.value}`,
+                    senderEmail: email.value,
+                    senderPhone: phone.value,
+                    message: fullMessage
+                });
+
+                const requestOptions = {
+                    method: "POST",
+                    body
+                };
+
+                fetch(endpoint, requestOptions)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Form submission failed.');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        showNotification('Message sent successfully!', true);
+                        contactForm.reset();
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        showNotification('Submission failed. Please try again.', false);
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Request';
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
