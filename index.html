@@ -6,7 +6,7 @@
     <!-- SEO Meta Tags from original site -->
     <title>Handyman Manlius | Modern & Reliable Handyman Services in Manlius, NY</title>
     <meta name="description" content="Your trusted local handyman in Manlius, NY, and surrounding areas. Offering reliable home repair, maintenance, and improvement services with a focus on quality and customer satisfaction. Contact Handyman Manlius today for a free quote!">
-    <meta name="keywords" content="handyman Manlius NY, home repair Manlius, home maintenance Manlius, local handyman, Fayetteville NY handyman, Cazenovia NY handyman, DeWitt NY handyman, Minoa NY handyman, Syracuse NY handyman, Jamesville NY handyman, Pompey NY handyman, home improvement Manlius">
+    <meta name="keywords" content="handyman Manlius NY, home repair Manlius, home maintenance Manlius, local handyman, Fayetteville NY handyman, Cazenovia NY handyman, DeWitt NY handyman, Minoa NY handyman, Syracuse NY handyman, Jamesville NY handyman, Pompey NY handyman, home improvement Manlius, fan replacement, light fixture replacement, faucet replacement, door handle replacement, outlet replacement, floor installation, deck repair, fence repair, testimonials">
     <meta name="robots" content="index, follow">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,12 +26,15 @@
             outline-offset: 2px;
             border-radius: 6px;
         }
+        /* Style for testimonial transition */
+        .testimonial-fade {
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
     <!-- Schema.org JSON-LD (from original) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Handyman",
       "name": "Handyman Manlius",
       "description": "Reliable handyman services for home repair, maintenance, and improvements in the Manlius, NY area.",
       "telephone": "+1-315-744-8646",
@@ -106,9 +109,9 @@
                         <i data-lucide="phone"></i>
                         Call (315) 744-8646
                     </a>
-                    <a href="mailto:quote@handymanmanlius.com" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gray-700 text-white font-bold px-8 py-4 rounded-lg hover:bg-gray-800 transition duration-300 shadow-lg text-lg">
+                    <a href="#contact" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gray-700 text-white font-bold px-8 py-4 rounded-lg hover:bg-gray-800 transition duration-300 shadow-lg text-lg">
                         <i data-lucide="mail"></i>
-                        Email for a Quote
+                        Get a Free Quote
                     </a>
                 </div>
             </div>
@@ -121,54 +124,71 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Comprehensive Handyman Services</h2>
                     <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">We handle a wide range of tasks to keep your home in top shape. Don't see what you need? Just ask!</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Item -->
+                <!-- UPDATED SERVICES GRID -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Item 1: Electrical Fixtures -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                            <i data-lucide="home"></i>
+                            <i data-lucide="lightbulb"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">General Home Repairs</h3>
-                        <p class="text-gray-600">Fixing the little things that make a big difference in your home's comfort and safety.</p>
+                        <h3 class="text-xl font-semibold mb-2">Electrical Fixtures</h3>
+                        <p class="text-gray-600">Installation and replacement of ceiling fans, light fixtures, outlets, and switches.</p>
                     </div>
-                    <!-- Service Item -->
+                    <!-- Service Item 2: Plumbing Fixtures -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                            <i data-lucide="paint-roller"></i>
+                            <i data-lucide="bath"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Drywall & Painting</h3>
-                        <p class="text-gray-600">From patching holes to a fresh coat of paint, we'll make your walls look new again.</p>
+                        <h3 class="text-xl font-semibold mb-2">Plumbing Fixtures</h3>
+                        <p class="text-gray-600">Replacing leaky kitchen and bathroom faucets or handling other minor plumbing repairs.</p>
                     </div>
-                    <!-- Service Item -->
+                    <!-- Service Item 3: Floor Installation -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                            <i data-lucide="plug"></i>
+                            <i data-lucide="layers"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Fixture Installation</h3>
-                        <p class="text-gray-600">Lights, ceiling fans, faucets, and more. Installed correctly and safely.</p>
+                        <h3 class="text-xl font-semibold mb-2">Floor Installation</h3>
+                        <p class="text-gray-600">Expert installation of laminate, vinyl, and other flooring types for a flawless finish.</p>
                     </div>
-                    <!-- Service Item -->
+                    <!-- Service Item 4: Hardware & Locks -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                            <i data-lucide="wrench"></i>
+                            <i data-lucide="key-round"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Minor Plumbing & Electrical</h3>
-                        <p class="text-gray-600">Leaky faucets, toilet repairs, outlet and switch replacements handled with care.</p>
+                        <h3 class="text-xl font-semibold mb-2">Hardware & Locks</h3>
+                        <p class="text-gray-600">Updating door handles, knobs, locks, and cabinet hardware for a fresh look.</p>
                     </div>
-                    <!-- Service Item -->
+                    <!-- Service Item 5: Assembly & Mounting -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                             <i data-lucide="hammer"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Assembly & Installation</h3>
-                        <p class="text-gray-600">Furniture assembly, shelf hanging, picture mounting, and other installations.</p>
+                        <h3 class="text-xl font-semibold mb-2">Assembly & Mounting</h3>
+                        <p class="text-gray-600">Professional assembly for furniture, and secure mounting for shelves, pictures, and more.</p>
                     </div>
-                    <!-- Service Item -->
+                     <!-- Service Item 6: Deck & Fence Repair -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                            <i data-lucide="grid-3x3"></i>
+                            <i data-lucide="fence"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">And Much More...</h3>
-                        <p class="text-gray-600">Deck repairs, gutter cleaning, door adjustments, and various other odd jobs.</p>
+                        <h3 class="text-xl font-semibold mb-2">Deck & Fence Repair</h3>
+                        <p class="text-gray-600">Repairing and maintaining decks and fences to enhance safety and curb appeal.</p>
+                    </div>
+                    <!-- Service Item 7: General Home Repairs -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">General Home Repairs</h3>
+                        <p class="text-gray-600">Fixing the little things that make a big difference in your home's comfort and safety.</p>
+                    </div>
+                     <!-- Service Item 8: And More -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">And Much More</h3>
+                        <p class="text-gray-600">Have a different project in mind? Don't hesitate to reach out and ask!</p>
                     </div>
                 </div>
             </div>
@@ -179,7 +199,7 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Team" alt="The Handyman Manlius team with their work truck and tools" class="rounded-xl shadow-2xl w-full">
+                        <img src="https://placehold.co/800x600/fef2f2/b91c1c?text=Handyman+Team" alt="The Handyman Manlius team with their work truck and tools" class="rounded-xl shadow-2xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e0e0e0/333?text=Image+Not+Found';">
                     </div>
                     <div class="md:w-1/2">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Your Trusted Local Professional</h2>
@@ -190,15 +210,46 @@
             </div>
         </section>
 
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">What Our Customers Say</h2>
+                    <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">We're proud of our work and our reputation for quality service.</p>
+                </div>
+                <div class="max-w-3xl mx-auto relative">
+                    <div id="testimonial-card" class="bg-white p-8 rounded-xl shadow-lg testimonial-fade">
+                        <div class="flex justify-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                            <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                            <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                            <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                            <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                        </div>
+                        <p id="testimonial-text" class="text-center text-xl text-gray-700 italic min-h-[120px] md:min-h-[80px]"></p>
+                        <p id="testimonial-author" class="text-center text-lg font-semibold text-gray-900 mt-6"></p>
+                        <p id="testimonial-service" class="text-center text-sm text-gray-500 mt-1"></p>
+                    </div>
+                    <!-- Testimonial Buttons -->
+                    <button id="prev-testimonial" class="absolute top-1/2 -translate-y-1/2 left-0 md:-left-16 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors">
+                        <i data-lucide="chevron-left" class="w-6 h-6 text-gray-700"></i>
+                    </button>
+                    <button id="next-testimonial" class="absolute top-1/2 -translate-y-1/2 right-0 md:-right-16 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors">
+                        <i data-lucide="chevron-right" class="w-6 h-6 text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Service Area Section -->
-        <section id="area" class="py-20 md:py-28">
+        <section id="area" class="bg-gray-100 py-20 md:py-28">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Proudly Serving Our Community</h2>
-                    <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">We provide handyman services to Manlius and many of its surrounding communities. If you're nearby, don't hesitate to reach out!</p>
+                    <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">We provide handyman services to Manlius and its surrounding communities. As a small, locally-owned business, we are dedicated to serving our neighbors with reliable and friendly service.</p>
                 </div>
                 <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
-                       <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4 text-lg text-gray-700">
+                        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4 text-lg text-gray-700">
                             <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Manlius, NY</li>
                             <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Fayetteville, NY</li>
                             <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>Cazenovia, NY</li>
@@ -235,6 +286,11 @@
                         <div>
                             <label for="phone" class="sr-only">Phone</label>
                             <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                        </div>
+                        <!-- NEW: Address Field -->
+                        <div>
+                            <label for="address" class="sr-only">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Your Address" required class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
                         </div>
                         <div>
                             <label for="message" class="sr-only">Message</label>
@@ -300,6 +356,89 @@
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
+        // --- TESTIMONIAL ROTATOR SCRIPT ---
+        const testimonials = [
+            {
+                quote: "They installed a new light fixture in our dining room and it looks fantastic. The work was done quickly, cleanly, and professionally. Highly recommend!",
+                author: "Sarah J. - Manlius, NY",
+                service: "Light Fixture Installation"
+            },
+            {
+                quote: "We had them install new laminate flooring in our living room. The attention to detail was incredible, and the result is a flawless, beautiful new floor.",
+                author: "Mike B. - Fayetteville, NY",
+                service: "Floor Installation"
+            },
+            {
+                quote: "Needed a new outlet installed in our garage. They were able to run the wiring and install it exactly where we wanted. Great service and very knowledgeable.",
+                author: "Emily R. - DeWitt, NY",
+                service: "New Outlet Installation"
+            },
+            {
+                quote: "An old outlet stopped working and was a potential fire hazard. They came out the same day, diagnosed the problem, and replaced it safely. Very reliable!",
+                author: "David L. - Cazenovia, NY",
+                service: "Outlet Repair"
+            },
+            {
+                quote: "The new ceiling fan they installed in our bedroom is perfect. It's quiet and was installed perfectly balanced. We couldn't be happier with the job.",
+                author: "Jessica P. - Jamesville, NY",
+                service: "Fan Installation"
+            }
+        ];
+
+        let currentTestimonialIndex = 0;
+        let testimonialInterval;
+
+        const testimonialCard = document.getElementById('testimonial-card');
+        const testimonialText = document.getElementById('testimonial-text');
+        const testimonialAuthor = document.getElementById('testimonial-author');
+        const testimonialService = document.getElementById('testimonial-service');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+
+        function updateTestimonialDisplay() {
+            const testimonial = testimonials[currentTestimonialIndex];
+            
+            testimonialCard.style.opacity = '0';
+
+            setTimeout(() => {
+                testimonialText.textContent = `"${testimonial.quote}"`;
+                testimonialAuthor.textContent = testimonial.author;
+                testimonialService.textContent = `Service: ${testimonial.service}`;
+                testimonialCard.style.opacity = '1';
+            }, 500); // Wait for fade out before changing content
+        }
+
+        function showNextTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            updateTestimonialDisplay();
+        }
+
+        function showPrevTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonialDisplay();
+        }
+
+        function startRotation() {
+            clearInterval(testimonialInterval); // Clear existing interval
+            testimonialInterval = setInterval(showNextTestimonial, 7000);
+        }
+
+        // Event Listeners for buttons
+        nextButton.addEventListener('click', () => {
+            showNextTestimonial();
+            startRotation(); // Reset interval on manual click
+        });
+
+        prevButton.addEventListener('click', () => {
+            showPrevTestimonial();
+            startRotation(); // Reset interval on manual click
+        });
+
+        // Initial setup
+        updateTestimonialDisplay();
+        startRotation();
+
+
         // --- CONTACT FORM SCRIPT ---
         const contactForm = document.getElementById('contact-form');
         const submitButton = document.getElementById('submit-button');
@@ -324,15 +463,18 @@
                 submitButton.disabled = true;
                 submitButton.textContent = 'Sending...';
 
-                const { name, email, phone, message } = event.target.elements;
+                const { name, email, phone, address, message } = event.target.elements;
 
                 const endpoint = "https://22czkke46wc6m6y4evtkk37g4u0uruvl.lambda-url.us-east-1.on.aws/";
+                
+                const fullMessage = `Address: ${address.value}\n\n${message.value}`;
+
                 const body = JSON.stringify({
                     title: "HANDYMANMANLIUS",
-                    senderName: `Handyman Manlius | ${name.value}`, // UPDATED: Changed senderName format
+                    senderName: `Handyman Manlius | ${name.value}`,
                     senderEmail: email.value,
                     senderPhone: phone.value,
-                    message: message.value
+                    message: fullMessage
                 });
 
                 const requestOptions = {
